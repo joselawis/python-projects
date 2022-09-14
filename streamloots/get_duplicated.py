@@ -43,16 +43,16 @@ def print_descriptions(text, my_list):
 
 
 def analyse_pack(card_pack):
-    print("Name: " + card_pack.name)
-    print("There are ", length_hint(card_pack.cards), " cards")
+    print(f"Name: {card_pack.name}")
+    print(f"There are {length_hint(card_pack.cards)} cards")
 
     # Obtaining unique card by using set()
-    print("There are ", length_hint(set(card_pack.cards)), " unique cards")
+    print(f"There are {length_hint(set(card_pack.cards))} unique cards")
     # print_descriptions("Cards:", pack.cards)
 
     # Obtaining duplicated cards
     duplicates = sorted(set(get_duplicates(card_pack.cards)))
-    print("There are ", length_hint(duplicates), " duplicates")
+    print(f"There are {length_hint(duplicates)} duplicates")
     if length_hint(duplicates) == 0:
         print("- There is no duplicated cards")
     else:
