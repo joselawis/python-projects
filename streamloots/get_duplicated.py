@@ -61,9 +61,7 @@ def analyse_pack(card_pack):
 
 try:
     print("Hi! This is a free duplicated cards checker for Streamloots")
-    print("What user do you want to check?")
-
-    user = input()
+    user = input("What user do you want to check?: ")
     url = "https://api.streamloots.com/pages/%s/sets" % user
 
     # Send a request to url
