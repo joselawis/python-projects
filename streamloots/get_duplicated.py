@@ -46,9 +46,11 @@ def analyse_pack(card_pack):
     print("Name: " + card_pack.name)
     print("There are ", length_hint(card_pack.cards), " cards")
 
+    # Obtaining unique card by using set()
     print("There are ", length_hint(set(card_pack.cards)), " unique cards")
     # print_descriptions("Cards:", pack.cards)
 
+    # Obtaining duplicated cards
     duplicates = sorted(set(get_duplicates(card_pack.cards)))
     print("There are ", length_hint(duplicates), " duplicates")
     if length_hint(duplicates) == 0:
@@ -63,10 +65,14 @@ try:
 
     user = input()
     url = "https://api.streamloots.com/pages/%s/sets" % user
+
+    # Send a request to url
     with urllib.request.urlopen(url) as response:
         json_data = json.loads(response.read())
+        # Parse data to CardPack object
         card_packs = list(map(lambda data: CardPack(data), json_data["data"]))
 
+        # Iterate the CardPack list
         for pack in card_packs:
             analyse_pack(pack)
 
