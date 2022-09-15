@@ -1,9 +1,9 @@
 # Strings
 print("Hello World")
-print('Hello World')
+print("Hello World")
 print("""Hello World""")
-print('''Hello World''')
-print(type('Hello world'))
+print("""Hello World""")
+print(type("Hello world"))
 
 # Integer
 print(10)
@@ -20,8 +20,8 @@ print(type(True))
 
 # List
 print([1, 2, 3, 4])
-print(['Hello', 'Bye'])
-print([10, 'Hello', True, 23.9])
+print(["Hello", "Bye"])
+print([10, "Hello", True, 23.9])
 print(type([]))
 
 # Tuples (not modifiable)

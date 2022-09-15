@@ -38,7 +38,7 @@ def get_duplicates(my_list):
 
 
 def print_descriptions(text, my_list):
-    print(text, *map(lambda d: d.description, my_list), sep='\n- ')
+    print(text, *map(lambda d: d.description, my_list), sep="\n- ")
 
 
 def analyse_pack(card_pack):
