@@ -1,6 +1,5 @@
 import json
 import urllib.request
-from operator import length_hint
 from urllib.error import HTTPError
 
 
@@ -44,16 +43,16 @@ def print_descriptions(text, my_list):
 
 def analyse_pack(card_pack):
     print(f"Name: {card_pack.name}")
-    print(f"There are {length_hint(card_pack.cards)} cards")
+    print(f"There are {len(card_pack.cards)} cards")
 
     # Obtaining unique card by using set()
-    print(f"There are {length_hint(set(card_pack.cards))} unique cards")
+    print(f"There are {len(set(card_pack.cards))} unique cards")
     # print_descriptions("Cards:", pack.cards)
 
     # Obtaining duplicated cards
     duplicates = sorted(set(get_duplicates(card_pack.cards)))
-    print(f"There are {length_hint(duplicates)} duplicates")
-    if length_hint(duplicates) == 0:
+    print(f"There are {len(duplicates)} duplicates")
+    if len(duplicates) == 0:
         print("- There is no duplicated cards")
     else:
         print_descriptions("Duplicated:", duplicates)
